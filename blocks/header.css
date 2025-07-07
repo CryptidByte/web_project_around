@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo {
+  max-width: 200px;
+  margin-top: 50px;
+}
+
+.header__line {
+  border: none;
+  border-top: 1px solid rgba(84, 84, 84, 0.7);
+  margin: 0;
+  margin-top: 50px;
+}
