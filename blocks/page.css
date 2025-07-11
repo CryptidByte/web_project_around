@@ -6,7 +6,13 @@ body {
   min-width: 320px;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 200px;
+  padding: 0 15vw;
   font-family: "Inter", Arial, sans-serif;
   color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .page {
+    padding: 0 5vw;
+  }
 }

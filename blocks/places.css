@@ -34,10 +34,10 @@
 .places__name {
   margin: 0;
   color: black;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 900;
   line-height: 1.2;
-  letter-spacing: -1px;
+  /* letter-spacing: -1px; */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -63,4 +63,16 @@
 .places__button:active {
   opacity: 100%;
   background-image: url("../images/like--active.svg");
+}
+
+@media screen and (max-width: 1024px) {
+  .places {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .places {
+    grid-template-columns: 1fr;
+  }
 }

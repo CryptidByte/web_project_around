@@ -77,3 +77,44 @@
 .profile__button--add:hover {
   opacity: 60%;
 }
+
+@media screen and (max-width: 1024px) {
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile__wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .profile__name {
+    font-size: 35px;
+  }
+
+  .profile__button--add {
+    margin-top: 30px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .profile {
+    flex-direction: column;
+  }
+  .profile__wrapper {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .profile__occupation {
+    text-align: center;
+  }
+
+  .profile__button--add {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
