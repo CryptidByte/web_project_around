@@ -1,0 +1,83 @@
+.popup {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup__wrapper {
+  position: relative;
+  background-color: white;
+  padding: 35px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.popup__button--close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-image: url("../images/add.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(45deg);
+}
+
+.popup__button--close:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+
+.popup__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 900;
+  color: black;
+}
+
+.popup__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  margin-bottom: 30px;
+}
+
+.popup__input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.popup__button--save {
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  border-radius: 2px;
+  border: none;
+}
+
+.popup__button--save:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.8);
+}
