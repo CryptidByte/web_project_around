@@ -52,7 +52,7 @@
   cursor: pointer;
 }
 
-.profile__button--edit {
+.profile__button-edit {
   width: 24px;
   height: 24px;
   background-image: url("../images/edit.svg");
@@ -61,11 +61,11 @@
   border: 1px solid white;
 }
 
-.profile__button--edit:hover {
+.profile__button-edit:hover {
   opacity: 60%;
 }
 
-.profile__button--add {
+.profile__button-add {
   width: 150px;
   height: 50px;
   background-image: url("../images/add.svg");
@@ -74,7 +74,7 @@
   border: 2px solid white;
 }
 
-.profile__button--add:hover {
+.profile__button-add:hover {
   opacity: 60%;
 }
 
@@ -92,7 +92,7 @@
     font-size: 35px;
   }
 
-  .profile__button--add {
+  .profile__button-add {
     margin-top: 30px;
     width: 50%;
   }
@@ -113,7 +113,7 @@
     text-align: center;
   }
 
-  .profile__button--add {
+  .profile__button-add {
     margin-top: 15px;
     width: 100%;
   }
