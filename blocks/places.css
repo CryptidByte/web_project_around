@@ -13,6 +13,7 @@
   height: 361px;
   background-color: white;
   border-radius: 10px;
+  position: relative;
 }
 
 .places__image {
@@ -37,7 +38,6 @@
   font-size: 24px;
   font-weight: 900;
   line-height: 1.2;
-  /* letter-spacing: -1px; */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -56,6 +56,10 @@
   height: 19px;
 }
 
+.places__button--liked {
+  background-image: url("../images/like--active.svg");
+}
+
 .places__button:hover {
   opacity: 50%;
 }
@@ -63,6 +67,20 @@
 .places__button:active {
   opacity: 100%;
   background-image: url("../images/like--active.svg");
+}
+
+.places__delete-button {
+  background-image: url("../images/delete.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 18px;
+  height: 19px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 1024px) {
