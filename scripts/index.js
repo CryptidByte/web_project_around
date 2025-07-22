@@ -54,6 +54,13 @@ function createCard(card) {
     cardElement.remove();
   });
 
+  imageElement.addEventListener("click", () => {
+    popupImage.src = card.link;
+    popupImage.alt = card.name;
+    popupCaption.textContent = card.name;
+    openPopup(imagePopup);
+  });
+
   return cardElement;
 }
 
@@ -97,3 +104,10 @@ addForm.addEventListener("submit", (event) => {
   addForm.reset();
   closePopup(addPopup);
 });
+
+const imagePopup = document.querySelector(".popup--image");
+const imagePopupCloseButton = imagePopup.querySelector(".popup__button--close");
+const popupImage = imagePopup.querySelector(".popup__image");
+const popupCaption = imagePopup.querySelector(".popup__caption");
+
+imagePopupCloseButton.addEventListener("click", () => closePopup(imagePopup));
