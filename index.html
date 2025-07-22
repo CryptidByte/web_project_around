@@ -30,62 +30,7 @@
           </div>
           <button class="profile__button profile__button--add"></button>
         </section>
-        <section class="places">
-          <div class="places__card">
-            <img
-              src="images/yosemite.jpg"
-              alt="Yosemite"
-              class="places__image"
-            />
-            <div class="places__bar">
-              <p class="places__name">Valle de Yosemite</p>
-              <button class="places__button"></button>
-            </div>
-          </div>
-          <div class="places__card">
-            <img src="images/louise.jpg" alt="Yosemite" class="places__image" />
-            <div class="places__bar">
-              <p class="places__name">Lago Louise</p>
-              <button class="places__button"></button>
-            </div>
-          </div>
-          <div class="places__card">
-            <img src="images/calvas.jpg" alt="Yosemite" class="places__image" />
-            <div class="places__bar">
-              <p class="places__name">Montañas Calvas</p>
-              <button class="places__button"></button>
-            </div>
-          </div>
-          <div class="places__card">
-            <img
-              src="images/latemar.jpg"
-              alt="Yosemite"
-              class="places__image"
-            />
-            <div class="places__bar">
-              <p class="places__name">Latemar</p>
-              <button class="places__button"></button>
-            </div>
-          </div>
-          <div class="places__card">
-            <img src="images/vanois.jpg" alt="Yosemite" class="places__image" />
-            <div class="places__bar">
-              <p class="places__name">Vanois National Park</p>
-              <button class="places__button"></button>
-            </div>
-          </div>
-          <div class="places__card">
-            <img
-              src="images/diBraies.jpg"
-              alt="Yosemite"
-              class="places__image"
-            />
-            <div class="places__bar">
-              <p class="places__name">Lago di Braies</p>
-              <button class="places__button"></button>
-            </div>
-          </div>
-        </section>
+        <section class="places"></section>
       </main>
       <footer class="footer">
         <p class="footer__text">© 2025 Around The U.S.</p>
@@ -114,6 +59,15 @@
         </div>
       </div>
     </div>
+    <template id="places-card-template">
+      <div class="places__card">
+        <img class="places__image" src="" alt="" />
+        <div class="places__bar">
+          <p class="places__name"></p>
+          <button class="places__button"></button>
+        </div>
+      </div>
+    </template>
     <script src="scripts/index.js"></script>
   </body>
 </html>
