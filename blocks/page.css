@@ -10,19 +10,19 @@ body {
   min-width: 320px;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 15vw;
+  padding: 0 40px;
   font-family: "Inter", Arial, sans-serif;
   color: white;
 }
 
 @media screen and (max-width: 1024px) {
   .page {
-    padding: 0 5vw;
+    padding: 0 20px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .page {
-    padding: 0 2vw;
+    padding: 0 10px;
   }
 }
