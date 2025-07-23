@@ -14,6 +14,7 @@
   background-color: white;
   border-radius: 10px;
   position: relative;
+  min-width: 0;
 }
 
 .places__image {
@@ -42,6 +43,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   flex-grow: 1;
+  min-width: 0;
 }
 
 .places__button {
