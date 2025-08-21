@@ -160,3 +160,32 @@ linkInput.addEventListener("input", function () {
   validateField(linkInput);
   toggleAddSaveButton();
 });
+
+// Cierre alternativo de ventanas emergentes
+
+editPopup.addEventListener("mousedown", (event) => {
+  if (event.target === editPopup) {
+    closePopup(editPopup);
+  }
+});
+
+addPopup.addEventListener("mousedown", (event) => {
+  if (event.target === addPopup) {
+    closePopup(addPopup);
+  }
+});
+
+imagePopup.addEventListener("mousedown", (event) => {
+  if (event.target === imagePopup) {
+    closePopup(imagePopup);
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    const openedPopup = document.querySelector(".popup__opened");
+    if (openedPopup) {
+      closePopup(openedPopup);
+    }
+  }
+});
