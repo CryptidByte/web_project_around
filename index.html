@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es_MX">
+<html lang="es-MX">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,13 +39,20 @@
         <div class="popup__wrapper">
           <button class="popup__button popup__button--close"></button>
           <h3 class="popup__title">Editar perfil</h3>
-          <form action="" class="popup__form">
+          <form
+            action=""
+            class="popup__form popup__form--edit"
+            name="editProfileForm"
+          >
             <input
               type="text"
               class="popup__input"
               placeholder="Nombre"
               id="profileNameInput"
               name="name"
+              required
+              minlength="2"
+              maxlength="40"
             />
             <input
               type="text"
@@ -53,8 +60,13 @@
               placeholder="Acerca de mi"
               id="profileOccupationInput"
               name="occupation"
+              required
+              minlength="2"
+              maxlength="200"
             />
-            <button class="popup__button popup__button--save">Guardar</button>
+            <button class="popup__button popup__button--save" disabled>
+              Guardar
+            </button>
           </form>
         </div>
       </div>
@@ -69,6 +81,8 @@
               placeholder="Título"
               name="title"
               required
+              minlength="2"
+              maxlength="30"
             />
             <input
               type="url"
@@ -77,7 +91,9 @@
               name="link"
               required
             />
-            <button class="popup__button popup__button--save">Crear</button>
+            <button class="popup__button popup__button--save" disabled>
+              Crear
+            </button>
           </form>
         </div>
       </div>
