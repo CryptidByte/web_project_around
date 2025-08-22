@@ -4,6 +4,9 @@ const addButton = document.querySelector(".profile__button--add");
 const editPopup = document.querySelector(".popup--edit");
 const editPopupCloseButton = document.querySelector(".popup__button--close");
 
+const profileNameEl = document.querySelector(".profile__name");
+const profileOccupationEl = document.querySelector(".profile__occupation");
+
 const editForm = editPopup.querySelector(".popup__form--edit");
 const nameInput = editForm.elements.name;
 const occupationInput = editForm.elements.occupation;
@@ -96,6 +99,20 @@ function renderCard(card) {
   cardsContainer.prepend(cardElement);
 }
 
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault(); // <- sin esto el navegador recarga
+
+  const newName = nameInput.value;
+  const newOccupation = occupationInput.value;
+
+  profileNameEl.textContent = newName;
+  profileOccupationEl.textContent = newOccupation;
+
+  closePopup(editPopup);
+}
+
+editForm.addEventListener("submit", handleProfileFormSubmit);
+
 initialCards.forEach(renderCard);
 
 editButton.addEventListener("click", () => openPopup(editPopup));
@@ -118,6 +135,8 @@ addForm.addEventListener("submit", (event) => {
 });
 
 imagePopupCloseButton.addEventListener("click", () => closePopup(imagePopup));
+
+//cierre alterno de popups
 
 editPopup.addEventListener("mousedown", (event) => {
   if (event.target === editPopup) {
@@ -145,6 +164,8 @@ document.addEventListener("keydown", (event) => {
     }
   }
 });
+
+//funcion enableValidation()
 
 enableValidation({
   formSelector: ".popup__form", // para querySelectorAll
