@@ -63,11 +63,11 @@
 }
 
 .places__button:hover {
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .places__button:active {
-  opacity: 100%;
+  opacity: 1;
   background-image: url("../images/like--active.svg");
 }
 

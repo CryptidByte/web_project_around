@@ -64,7 +64,7 @@
 }
 
 .popup__button--close:hover {
-  opacity: 60%;
+  opacity: 0.6;
   cursor: pointer;
 }
 
@@ -92,6 +92,10 @@
   color: rgba(0, 0, 0, 0.2);
 }
 
+.popup__input:invalid {
+  border-bottom: 1px solid red;
+}
+
 .popup__button--save {
   height: 50px;
   background-color: black;
@@ -104,4 +108,11 @@
 .popup__button--save:hover {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.8);
+}
+
+.popup__button--save:disabled {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
 }
