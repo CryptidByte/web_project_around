@@ -119,50 +119,6 @@ addForm.addEventListener("submit", (event) => {
 
 imagePopupCloseButton.addEventListener("click", () => closePopup(imagePopup));
 
-function validateField(input) {
-  if (!input.validity.valid) {
-    input.reportValidity();
-  }
-}
-
-function toggleEditSaveButton() {
-  if (editForm.checkValidity()) {
-    saveButton.removeAttribute("disabled");
-  } else {
-    saveButton.setAttribute("disabled", true);
-  }
-}
-
-nameInput.addEventListener("input", function () {
-  validateField(nameInput);
-  toggleEditSaveButton();
-});
-
-occupationInput.addEventListener("input", function () {
-  validateField(occupationInput);
-  toggleEditSaveButton();
-});
-
-function toggleAddSaveButton() {
-  if (addForm.checkValidity()) {
-    addSaveButton.removeAttribute("disabled");
-  } else {
-    addSaveButton.setAttribute("disabled", true);
-  }
-}
-
-titleInput.addEventListener("input", function () {
-  validateField(titleInput);
-  toggleAddSaveButton();
-});
-
-linkInput.addEventListener("input", function () {
-  validateField(linkInput);
-  toggleAddSaveButton();
-});
-
-// Cierre alternativo de ventanas emergentes
-
 editPopup.addEventListener("mousedown", (event) => {
   if (event.target === editPopup) {
     closePopup(editPopup);
@@ -188,4 +144,13 @@ document.addEventListener("keydown", (event) => {
       closePopup(openedPopup);
     }
   }
+});
+
+enableValidation({
+  formSelector: ".popup__form", // para querySelectorAll
+  inputSelector: ".popup__input", // para buscar inputs dentro de cada form
+  submitButtonSelector: ".popup__button", // para encontrar el botón del form
+  inactiveButtonClass: "popup__button_disabled", // classList.add/remove
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
 });

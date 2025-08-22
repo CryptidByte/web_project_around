@@ -92,6 +92,10 @@
   color: rgba(0, 0, 0, 0.2);
 }
 
+.popup__input:invalid {
+  border-bottom: 1px solid red;
+}
+
 .popup__button--save {
   height: 50px;
   background-color: black;
