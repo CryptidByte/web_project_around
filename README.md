@@ -1,7 +1,10 @@
-# Proyecto 8 TripleTen
-## Lógica y métodos de programación en JavaScript  
+# Proyecto 9 TripleTen
+## Manejo de objetos y eventos en JavaScript
 
-Página web interactiva y responsiva que muestra distintos lugares turísticos de Estados Unidos (inicialmente) en forma de tarjetas. La aplicación permite al usuario visualizar, añadir y gestionar lugares favoritos de forma sencilla.
+Página web interactiva y responsiva que muestra distintos lugares turísticos de Estados Unidos (inicialmente) en forma de tarjetas. La aplicación permite al usuario visualizar, añadir y gestionar lugares favoritos de forma sencilla. 
+
+Nuevo en el sprint 9:
+Validacion de formularios.
 
 ## Tecnologías utilizadas
 
