@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +42,7 @@
           <form
             action=""
             class="popup__form popup__form--edit"
+            novalidate
             name="editProfileForm"
           >
             <input
@@ -80,7 +81,11 @@
         <div class="popup__wrapper">
           <button class="popup__button popup__button--close"></button>
           <h3 class="popup__title">Nuevo lugar</h3>
-          <form class="popup__form popup__form--add" name="addCardForm">
+          <form
+            class="popup__form popup__form--add"
+            novalidate
+            name="addCardForm"
+          >
             <input
               type="text"
               class="popup__input"
@@ -123,7 +128,6 @@
         <button class="places__delete-button"></button>
       </div>
     </template>
-    <script src="scripts/validate.js"></script>
-    <script src="scripts/index.js"></script>
+    <script type="module" src="scripts/index.js"></script>
   </body>
 </html>
