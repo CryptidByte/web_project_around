@@ -1,10 +1,9 @@
 export default class Card {
-  constructor(cardData, templateSelector) {
+  constructor(cardData, templateSelector, handleCardClick) {
     this._name = cardData.name;
     this._link = cardData.link;
     this._templateSelector = templateSelector;
-
-    this._onImageClick = null;
+    this._handleCardClick = handleCardClick;
   }
 
   generateCard() {
@@ -23,12 +22,6 @@ export default class Card {
     return this._element;
   }
 
-  setImageClick(handler) {
-    this._onImageClick = handler;
-  }
-
-  //metodos privados
-
   _getTemplate() {
     return document
       .querySelector(this._templateSelector)
@@ -45,15 +38,11 @@ export default class Card {
     this._element = null;
   }
 
-  _handleImageClick() {
-    if (typeof this._onImageClick === "function") {
-      this._onImageClick(this._name, this._link);
-    }
-  }
-
   _setEventListeners() {
     this._likeBtn.addEventListener("click", () => this._handleLike());
     this._delBtn.addEventListener("click", () => this._handleDelete());
-    this._imgEl.addEventListener("click", () => this._handleImageClick());
+    this._imgEl.addEventListener("click", () =>
+      this._handleCardClick(this._name, this._link)
+    );
   }
 }

@@ -1,55 +1,29 @@
-export function openPopup(popup) {
-  popup.classList.add("popup__opened");
-  document.addEventListener("keydown", _handleEscClose);
+import Card from "./Card.js";
+import PopupWithImage from "./PopupWithImage.js";
+import UserInfo from "./UserInfo.js";
+import { cardsContainer } from "./constants.js";
+
+export function handleCardClick(name, link) {
+  const imagePopup = new PopupWithImage(".popup--image");
+  imagePopup.open(name, link);
+  imagePopup.setEventListeners();
 }
 
-export function closePopup(popup) {
-  popup.classList.remove("popup__opened");
-  document.removeEventListener("keydown", _handleEscClose);
-}
-
-function _handleEscClose(evt) {
-  if (evt.key !== "Escape") return;
-  const opened = document.querySelector(".popup__opened");
-  if (opened) closePopup(opened);
-}
-
-export function enableOverlayClose(popup) {
-  popup.addEventListener("mousedown", (evt) => {
-    if (
-      evt.target === evt.currentTarget || // overlay
-      evt.target.classList.contains("popup__button--close") // boton X
-    ) {
-      closePopup(popup);
-    }
+export function handleEditFormSubmit({ name, occupation }) {
+  const userInfo = new UserInfo({
+    nameSelector: ".profile__name",
+    aboutSelector: ".profile__occupation",
   });
+  userInfo.setUserInfo(name, occupation);
 }
 
-export function makeProfileSubmitHandler({
-  nameInput,
-  occupationInput,
-  profileNameEl,
-  profileOccupationEl,
-  editPopup,
-}) {
-  return function handleProfileFormSubmit(evt) {
-    evt.preventDefault();
-    profileNameEl.textContent = nameInput.value;
-    profileOccupationEl.textContent = occupationInput.value;
-    closePopup(editPopup);
-  };
-}
+export function handleAddFormSubmit({ title, link }) {
+  const newCard = new Card(
+    { name: title, link },
+    "#places-card-template",
+    handleCardClick
+  );
 
-export function makeAddCardSubmitHandler({
-  titleInput,
-  linkInput,
-  addPopup,
-  onAddCard,
-}) {
-  return function handleAddCardFormSubmit(evt) {
-    evt.preventDefault();
-    onAddCard({ name: titleInput.value, link: linkInput.value });
-    evt.target.reset();
-    closePopup(addPopup);
-  };
+  const cardEl = newCard.generateCard();
+  cardsContainer.append(cardEl);
 }
