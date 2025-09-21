@@ -1,11 +1,11 @@
-# Proyecto 10 TripleTen
+# Proyecto 11 TripleTen
 
-## Introducción a la programación orientada a objetos
+## Poo Avanzado y NPM
 
 Página web interactiva y responsiva que muestra distintos lugares turísticos de Estados Unidos (inicialmente) en forma de tarjetas. La aplicación permite al usuario visualizar, añadir y gestionar lugares favoritos de forma sencilla.
 
-Nuevo en el sprint 10:
-Refactorizacion en gran parte del codigo agregando modulos, clases y metodos publicos como privados. Se utilizo la separacion de conceptos para tener la logica principal solo en index.js.
+Nuevo en el sprint 11:
+Se añadieron clases nuevas para mejorar la abstraccion, asi como subclases para aplicar conceptos de herencia y polimorfismo. 
 
 ## Tecnologías utilizadas
 
